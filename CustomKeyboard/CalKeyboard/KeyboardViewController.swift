@@ -13,9 +13,13 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var nextKeyboardButton: UIButton!
     @IBOutlet var deleteButton: UIButton!
     @IBOutlet var returnButton: UIButton!
-    @IBOutlet var testButton: UIButton!
-    @IBOutlet var tview: UIImageView!
-
+    @IBOutlet var spaceButton: UIButton!
+    @IBOutlet var fetchButton: UIButton!
+    @IBOutlet var getInLoserButton: UIButton!
+    @IBOutlet var sitButton: UIButton!
+    @IBOutlet var imSickButton: UIButton!
+    @IBOutlet var obsessedButton: UIButton!
+    @IBOutlet var doesntGoHereButton: UIButton!
 
     var keyboardView: UIView!
     
@@ -43,8 +47,28 @@ class KeyboardViewController: UIInputViewController {
         // The app has just changed the document's contents, the document context has been updated.
     }
     
-    func typeSomething() {
-        self.textDocumentProxy.insertText("texttexttext")
+    func thatsSoFetchText() {
+        self.textDocumentProxy.insertText("That's so fetch!")
+    }
+    
+    func getInLoserText() {
+        self.textDocumentProxy.insertText("Get in, loser. We're going shopping.")
+    }
+    
+    func cantSitWithUsText() {
+        self.textDocumentProxy.insertText("You can’t sit with us!")
+    }
+    
+    func cantGoOutText() {
+        self.textDocumentProxy.insertText("I can't go out. *cough* *cough* I'm sick.")
+    }
+    
+    func obsessedText() {
+        self.textDocumentProxy.insertText("Why are you so obsessed with me?")
+    }
+    
+    func doesntGoHereText() {
+        self.textDocumentProxy.insertText("She doesn't even go here!")
     }
     
     func delete() {
@@ -55,10 +79,23 @@ class KeyboardViewController: UIInputViewController {
         self.textDocumentProxy.insertText("\n")
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
+    func space() {
+        self.textDocumentProxy.insertText(" ")
     }
+    
+    func setUpButtonBorder() {
+        let buttonArr: [UIButton] = [nextKeyboardButton, deleteButton, returnButton, spaceButton, fetchButton, getInLoserButton, sitButton, imSickButton, obsessedButton, doesntGoHereButton]
+        for button in buttonArr {
+            if (button == nextKeyboardButton || button == deleteButton || button == spaceButton || button == returnButton) {
+                button.layer.cornerRadius = 5
+            } else {
+                button.layer.cornerRadius = 1
+            }
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.whiteColor().CGColor
+        }
+    }
+    
     
     func loadInterface() {
         let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
@@ -66,12 +103,18 @@ class KeyboardViewController: UIInputViewController {
         keyboardView.frame = view.frame
         view.addSubview(keyboardView)
         view.backgroundColor = keyboardView.backgroundColor
-        nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside) // advanceToNextInputMode is already defined in template
-        
-        testButton.addTarget(self, action: "typeSomething", forControlEvents: .TouchUpInside)
+        nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
         returnButton.addTarget(self, action: "newLine", forControlEvents: .TouchUpInside)
         deleteButton.addTarget(self, action: "delete", forControlEvents: .TouchUpInside)
+        spaceButton.addTarget(self, action: "space", forControlEvents: .TouchUpInside)
+        fetchButton.addTarget(self, action: "thatsSoFetchText", forControlEvents: .TouchUpInside)
+        getInLoserButton.addTarget(self, action: "getInLoserText", forControlEvents: .TouchUpInside)
+        sitButton.addTarget(self, action: "cantSitWithUsText", forControlEvents: .TouchUpInside)
+        imSickButton.addTarget(self, action: "cantGoOutText", forControlEvents: .TouchUpInside)
+        obsessedButton.addTarget(self, action: "obsessedText", forControlEvents: .TouchUpInside)
+        doesntGoHereButton.addTarget(self, action: "doesntGoHereText", forControlEvents: .TouchUpInside)
         
+        setUpButtonBorder()
 
     }
 
