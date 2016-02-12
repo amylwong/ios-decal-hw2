@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A55544A1BA930D800AF502F /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5554491BA930D800AF502F /* Keyboard.xib */; settings = {ASSET_TAGS = (); }; };
+		3A55544A1BA930D800AF502F /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5554491BA930D800AF502F /* Keyboard.xib */; };
 		3AAA639A1BA9263900E3822E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA63991BA9263900E3822E /* AppDelegate.swift */; };
 		3AAA639C1BA9263900E3822E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA639B1BA9263900E3822E /* ViewController.swift */; };
 		3AAA639F1BA9263900E3822E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA639D1BA9263900E3822E /* Main.storyboard */; };
@@ -15,6 +15,11 @@
 		3AAA63A41BA9263900E3822E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA63A21BA9263900E3822E /* LaunchScreen.storyboard */; };
 		3AAA63B31BA9283500E3822E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA63B21BA9283500E3822E /* KeyboardViewController.swift */; };
 		3AAA63B71BA9283500E3822E /* CalKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AAA63B01BA9283500E3822E /* CalKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1792B081C6DB96700ED2ED5 /* cantsitwithus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1792B031C6DB96700ED2ED5 /* cantsitwithus.jpg */; };
+		E1792B091C6DB96700ED2ED5 /* delete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1792B041C6DB96700ED2ED5 /* delete.jpg */; };
+		E1792B0A1C6DB96700ED2ED5 /* fetch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1792B051C6DB96700ED2ED5 /* fetch.jpg */; };
+		E1792B0B1C6DB96700ED2ED5 /* getinloser.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1792B061C6DB96700ED2ED5 /* getinloser.jpg */; };
+		E1792B0C1C6DB96700ED2ED5 /* globe-button.png in Resources */ = {isa = PBXBuildFile; fileRef = E1792B071C6DB96700ED2ED5 /* globe-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		3AAA63B01BA9283500E3822E /* CalKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAA63B21BA9283500E3822E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		3AAA63B41BA9283500E3822E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1792B031C6DB96700ED2ED5 /* cantsitwithus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cantsitwithus.jpg; sourceTree = "<group>"; };
+		E1792B041C6DB96700ED2ED5 /* delete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = delete.jpg; sourceTree = "<group>"; };
+		E1792B051C6DB96700ED2ED5 /* fetch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fetch.jpg; sourceTree = "<group>"; };
+		E1792B061C6DB96700ED2ED5 /* getinloser.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = getinloser.jpg; sourceTree = "<group>"; };
+		E1792B071C6DB96700ED2ED5 /* globe-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "globe-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +117,24 @@
 		3AAA63B11BA9283500E3822E /* CalKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E1792B021C6DB95A00ED2ED5 /* Images */,
 				3AAA63B21BA9283500E3822E /* KeyboardViewController.swift */,
 				3A5554491BA930D800AF502F /* Keyboard.xib */,
 				3AAA63B41BA9283500E3822E /* Info.plist */,
 			);
 			path = CalKeyboard;
+			sourceTree = "<group>";
+		};
+		E1792B021C6DB95A00ED2ED5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E1792B031C6DB96700ED2ED5 /* cantsitwithus.jpg */,
+				E1792B041C6DB96700ED2ED5 /* delete.jpg */,
+				E1792B051C6DB96700ED2ED5 /* fetch.jpg */,
+				E1792B061C6DB96700ED2ED5 /* getinloser.jpg */,
+				E1792B071C6DB96700ED2ED5 /* globe-button.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1792B0B1C6DB96700ED2ED5 /* getinloser.jpg in Resources */,
+				E1792B081C6DB96700ED2ED5 /* cantsitwithus.jpg in Resources */,
 				3A55544A1BA930D800AF502F /* Keyboard.xib in Resources */,
+				E1792B0A1C6DB96700ED2ED5 /* fetch.jpg in Resources */,
+				E1792B091C6DB96700ED2ED5 /* delete.jpg in Resources */,
+				E1792B0C1C6DB96700ED2ED5 /* globe-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
